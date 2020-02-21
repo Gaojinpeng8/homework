@@ -1,0 +1,27 @@
+.viewport {
+    width: 900px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  .father {
+    height: inherit;
+    width: 3000%; /* 子元素 float 无法撑开 */
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+  }
+  .father > div {
+    width: 550px;
+    height: inherit;
+    float: left;
+  }
+  .mother {
+    width: 30px;
+    height: inherit;
+    line-height: 300px;
+    text-align: center;
+    cursor: pointer;
+    user-select:none;
+    background: rgba(0,0,0,0.15);
+    position: absolute;top: 0;
+  } .mother.left { left: 0 } .mother.right { right: 0 }
